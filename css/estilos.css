@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Inter:wght@400;600;800&family=Open+Sans:wght@300;400;800&display=swap" rel="stylesheet');
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Open Sans';
+    font-weight: 100;
+    margin: 0;
+}
+
+nav {
+    color: white;
+    width: 100vw;
+    height: 18.83vh;
+    background-color: #0303df;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 19vh;
+    background-color: black;
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+
+}
+.portfolio {
+    font-family: 'anton';
+    color: #0303df;
+}
+
+section div img {
+    transition: transform 0.3s ease;
+  }
+  
+  section div img:hover {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+
+    justify-content: space-between;
+
+}
+
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   /*manejar el espacio entre las filas de elementos con flex*/
+   height: 100vh;
+
+}
+
+main div {
+    width: 45.83%;
+  
+
+}
+
+div img, video {
+
+width: 100%;
+
+}
+
+
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 60px;
+}
+
+h1.titulo:hover {
+    color: #212529;
+    font-size: 80px;
+    transition: all 1s;
+    }
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+
+    font-weight: 500;
+
+
+}
+
+header h1 {
+    font-family: 'Open Sans';
+    font-weight: 800;
+
+}
+a:hover {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+
+header h3 {
+    font-family: 'Open Sans'
+    text-transform: uppercase;
+    color: #4500b2;
+    letter-spacing: 6px;
+
+}
+
+header p {
+    font-family: 'Open Sans';
+    font-size: 20px;
+}
+
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+
+a:hover {
+    
+  opacity: 0.5;
+  transform: scale(0.90);
+} 
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('path/to/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: -100px;
+    animation: appear 4s ease-in-out forwards;
+}
+
+@keyframes appear {
+    0% {
+        top: -100px;
+        opacity: 0;
+    }
+    50% {
+        top: 50px;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+}
+header a {
+
+    background-color: #212529;
+
+}
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: white;
+    font-size: 4vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+.lightboxOverlay { background-color: gray;
+  
+
+}
+
+footer {
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3,3, 224);
+}
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
